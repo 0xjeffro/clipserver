@@ -7,7 +7,6 @@ import (
 	"sync"
 
 	"github.com/gin-gonic/gin"
-	"golang.design/x/clipboard"
 )
 
 var (
@@ -16,10 +15,6 @@ var (
 )
 
 func main() {
-	if err := clipboard.Init(); err != nil {
-		panic(err)
-	}
-
 	// 创建 gin router
 	router := gin.Default()
 
